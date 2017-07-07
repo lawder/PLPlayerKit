@@ -2,8 +2,8 @@
 //  PLPlayerOption.h
 //  PLPlayerKit
 //
-//  Created by WangSiyu on 2/24/16.
-//  Copyright © 2016 qgenius. All rights reserved.
+//  Created by 何昊宇 on 2017/5/15.
+//  Copyright © 2017年 Aaron. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -110,32 +110,12 @@ extern NSString * _Nonnull PLPlayerOptionKeyDNSManager;
  @abstract 开启/关闭 HappyDNS 的 DNS 解析
  
  @discussion 默认开启
-
+ 
  @waring 该参数仅对 rtmp 与 flv 生效，值类型为 BOOL
  
  @since v2.3.0
  */
 extern NSString * _Nonnull PLPlayerOptionKeyHappyDNSEnable;
-
-/**
- @abstract 点播使用 ffmpeg 还是 AVPlayer
- 
- @discussion YES 表示使用 ffmpeg ，NO 表示使用 AVPlayer。默认为 NO。
- 
- @waring 该参数仅对点播生效，值类型为 BOOL
- 
- @since v2.3.0
- */
-extern NSString * _Nonnull PLPlayerOptionKeyVODFFmpegEnable;
-
-/**
- @abstract ffmpeg 播放前最大探测流的字节数，单位是 byte
- 
- @discussion 默认值：直播 128 * 1024，点播 5*1024*1024
- 
- @since v2.4.1
- */
-extern NSString * _Nonnull PLPlayerOptionKeyProbeSize;
 
 /**
  PLPlayer 的可选配置类，在初始化 PLPlayer 对象的时候传入其实例进行 PLPlayer 的可选项配置
@@ -146,8 +126,6 @@ extern NSString * _Nonnull PLPlayerOptionKeyProbeSize;
 
 /**
  @abstract 使用默认配置生成一个 PLPlayerOption 对象
- 
- @discussion
  
  @return 生成的 PLPlayerOption 对象
  
@@ -195,5 +173,6 @@ extern NSString * _Nonnull PLPlayerOptionKeyProbeSize;
  @since v1.0.0
  */
 - (nonnull NSDictionary *)dictionaryValue;
+
 
 @end
