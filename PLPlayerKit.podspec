@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PLPlayerKit"
-  s.version          = "2.4.3"
+  s.version          = "3.0.0"
   s.summary          = "Pili iOS video player SDK, RTMP, HLS video streaming supported."
   s.homepage         = "https://github.com/pili-engineering/PLPlayerKit"
   s.license          = 'Apache License, Version 2.0'
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.vendored_libraries   = 'Pod/Library/lib/*.a'
 
   s.dependency 'HappyDNS', '~> 0.3.10'
-  s.frameworks = ["UIKit", "Foundation", "CoreGraphics", "MediaPlayer", "CoreAudio", "AudioToolbox", "Accelerate", "QuartzCore", "OpenGLES", "AVFoundation"]
+  s.frameworks = ["UIKit", "Foundation", "CoreGraphics", "MediaPlayer", "CoreAudio", "AudioToolbox", "Accelerate", "QuartzCore", "OpenGLES", "AVFoundation", "VideoToolbox"]
   s.libraries = "c++", "z", "bz2", "iconv"
 
 end
