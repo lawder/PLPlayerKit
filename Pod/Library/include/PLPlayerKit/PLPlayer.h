@@ -213,6 +213,20 @@ extern NSString * _Nonnull playerVersion();
  */
 - (void)player:(nonnull PLPlayer *)player willRenderFrame:(nullable CVPixelBufferRef)frame pts:(int64_t)pts sarNumerator:(int)sarNumerator sarDenominator:(int)sarDenominator;
 
+/**
+ 回调音频数据
+ 
+ @param player 调用该方法的 PLPlayer 对象
+ @param audioBufferList 音频数据
+ @param audioStreamDescription 音频格式信息
+ @param pts 显示时间戳 是解码器进行显示帧时相对于SCR（系统参考）的时间戳。SCR可以理解为解码器应该开始从磁盘读取数据时的时间
+ @param sampleFormat 采样位数 枚举：PLPlayerAVSampleFormat
+ @return audioBufferList 音频数据
+ 
+ @since v2.4.3
+ */
+- (nonnull AudioBufferList *)player:(nonnull PLPlayer *)player willAudioRenderBuffer:(nonnull AudioBufferList *)audioBufferList asbd:(AudioStreamBasicDescription)audioStreamDescription pts:(int64_t)pts sampleFormat:(PLPlayerAVSampleFormat)sampleFormat;
+
 @end
 
 /**
